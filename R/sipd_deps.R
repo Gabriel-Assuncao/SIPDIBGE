@@ -15,21 +15,26 @@
 #' @export
 
 sipd_deps <- function(survey = NULL) {
+  options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  if (is.null(survey) | !is.character(survey)) {
+    survey <- "SIPD"
+  }
+  packs <- utils::available.packages(repos=getOption("repos"))
   if (toupper(survey) == "PNADC") {
-    deps <- tools::package_dependencies("PNADcIBGE")
+    deps <- tools::package_dependencies("PNADcIBGE", packs)
   }
   else if (toupper(survey) == "POF") {
-    deps <- tools::package_dependencies("POFIBGE")
+    deps <- tools::package_dependencies("POFIBGE", packs)
   }
   else if (toupper(survey) == "PNS") {
-    deps <- tools::package_dependencies("PNSIBGE")
+    deps <- tools::package_dependencies("PNSIBGE", packs)
   }
   else if (toupper(survey) == "COVID") {
-    deps <- tools::package_dependencies("COVIDIBGE")
+    deps <- tools::package_dependencies("COVIDIBGE", packs)
   }
   else {
     sipd <- SIPDIBGE::sipd_packages()
-    deps <- tools::package_dependencies(sipd)
+    deps <- tools::package_dependencies(sipd, packs)
   }
   return(deps)
 }

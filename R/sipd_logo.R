@@ -15,6 +15,10 @@
 #' @export
 
 sipd_logo <- function(survey = NULL) {
+  options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  if (is.null(survey) | !is.character(survey)) {
+    survey <- "SIPD"
+  }
   if (toupper(survey) == "PNADC") {
     logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnadc_logo.png"))
     grDevices::dev.new()

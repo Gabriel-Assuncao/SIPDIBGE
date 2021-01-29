@@ -15,6 +15,10 @@
 #' @export
 
 sipd_packages <- function(survey = NULL) {
+  options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  if (is.null(survey) | !is.character(survey)) {
+    survey <- "SIPD"
+  }
   if (toupper(survey) == "PNADC") {
     packs <- "PNADcIBGE"
   }

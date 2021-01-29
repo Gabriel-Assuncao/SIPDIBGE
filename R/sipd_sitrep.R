@@ -15,11 +15,15 @@
 #' @export
 
 sipd_sitrep <- function(survey = NULL) {
+  options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  if (is.null(survey) | !is.character(survey)) {
+    survey <- "SIPD"
+  }
   cli::cat_bullet("R: ", getRversion())
   if (rstudioapi::isAvailable()) {
     cli::cat_bullet("RStudio: ", rstudioapi::getVersion())
   }
-  packs <- utils::available.packages()
+  packs <- utils::available.packages(repos=getOption("repos"))
   if (toupper(survey) == "PNADC") {
     deps <- unique(sort(c("PNADcIBGE", unlist(SIPDIBGE::sipd_deps(survey="PNADC")))))
     base <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid", "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk", "utils")

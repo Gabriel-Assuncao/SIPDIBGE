@@ -15,6 +15,10 @@
 #' @export
 
 sipd_conflicts <- function(survey = NULL) {
+  options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  if (is.null(survey) | !is.character(survey)) {
+    survey <- "SIPD"
+  }
   packs <- purrr::set_names(grep("^package:", search(), value=TRUE))
   funcs <- NULL
   for (i in 1:length(packs)) {
