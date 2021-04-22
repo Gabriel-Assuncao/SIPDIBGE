@@ -1,4 +1,4 @@
-af3299d83eb3fa0207c9e556bfdb8981 *DESCRIPTION
+dc680f7d7b94184a573ab60b8ae3ae14 *DESCRIPTION
 1eaf8f4f5a4c7c5de586adcbb8178fb7 *NAMESPACE
 ecaa88f7fa0bf610a5a26cf545dcd3aa *NEWS.md
 0785c38b671727684b5d5a779309be5f *R/sipd_conflicts.R
@@ -7,11 +7,12 @@ ecaa88f7fa0bf610a5a26cf545dcd3aa *NEWS.md
 09f76f1a4f18735c05e1a987b610d812 *R/sipd_packages.R
 4083ba48ff899147b8493753c987d9dc *R/sipd_sitrep.R
 c813dcdfa9333cec9892b63cdb2fc07e *R/sipd_update.R
+d11268d8887852ac1c99ed72be1d491c *inst/extdata/am_logo.png
 c7820347c1ed8b099722a9becfe34479 *inst/extdata/covid_logo.png
 a34839de3a329161a85ed159635100a8 *inst/extdata/pnadc_logo.png
 c0e72596b902a2cfcc866abfb5fe6d12 *inst/extdata/pns_logo.png
 4a6497e50214a4843e7be4f659d8d898 *inst/extdata/pof_logo.png
-d11268d8887852ac1c99ed72be1d491c *inst/extdata/sipd_logo.png
+ea0024713cf2004e444e4882b2d090e8 *inst/extdata/sipd_logo.PNG
 c5bb31c914830f9f17e2dd8384656493 *man/sipd_conflicts.Rd
 ab3210688e1f1ccfab40cb142bb38d1b *man/sipd_deps.Rd
 3003d43cd41abf9130caac4d0b1acfe8 *man/sipd_logo.Rd
