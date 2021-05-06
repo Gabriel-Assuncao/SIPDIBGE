@@ -21,9 +21,13 @@ For more information, visit the survey official website <\url{https://www.ibge.g
 \examples{
 \donttest{
 sipd_deps()
+# Presenting information about the PNADcIBGE package
 sipd_deps(survey="PNADC")
+# Presenting information about the POFIBGE package
 sipd_deps(survey="POF")
+# Presenting information about the PNSIBGE package
 sipd_deps(survey="PNS")
+# Presenting information about the COVIDIBGE package
 sipd_deps(survey="COVID")}
 }
 \seealso{

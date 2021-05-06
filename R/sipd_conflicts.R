@@ -8,9 +8,13 @@
 #' @examples
 #' \donttest{
 #' sipd_conflicts()
+#' # Presenting information about the PNADcIBGE package
 #' sipd_conflicts(survey="PNADC")
+#' # Presenting information about the POFIBGE package
 #' sipd_conflicts(survey="POF")
+#' # Presenting information about the PNSIBGE package
 #' sipd_conflicts(survey="PNS")
+#' # Presenting information about the COVIDIBGE package
 #' sipd_conflicts(survey="COVID")}
 #' @export
 

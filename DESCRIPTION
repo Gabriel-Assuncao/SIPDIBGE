@@ -1,7 +1,7 @@
 Package: SIPDIBGE
 Type: Package
 Title: Collection of Household Survey Packages Conducted by IBGE
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(person("Gabriel", "Assuncao", email = "pacotesipd@ibge.gov.br",
                   role = c("aut", "cre")),
              person("Luna", "Hidalgo", email = "pacotesipd@ibge.gov.br",
@@ -25,6 +25,6 @@ Author: Gabriel Assuncao [aut, cre],
   Luna Hidalgo [aut],
   Douglas Braga [ctb]
 Maintainer: Gabriel Assuncao <pacotesipd@ibge.gov.br>
-Packaged: 2021-04-21 16:15:41 UTC; gabriel.assuncao
+Packaged: 2021-05-01 01:29:25 UTC; gabriel.assuncao
 Repository: CRAN
-Date/Publication: 2021-04-22 02:00:02 UTC
+Date/Publication: 2021-05-06 09:10:02 UTC
