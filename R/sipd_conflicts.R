@@ -1,10 +1,10 @@
 #' Indicate conflicts of the packages inside SIPDIBGE
 #' @description This function describes conflicts between functions of the packages inside SIPDIBGE and another installed packages.
-#' @import PNADcIBGE POFIBGE PNSIBGE COVIDIBGE tidyverse cli purrr rstudioapi png grDevices graphics utils tibble
+#' @import PNADcIBGE POFIBGE PNSIBGE COVIDIBGE cli purrr rstudioapi png grDevices graphics utils tibble
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
-#' @return A vector with conflits of functions of the packages inside SIPDIBGE.
+#' @return A vector with conflicts of functions of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
-#' @seealso \link[SIPDIBGE]{sipd_deps} for indicating dependencies of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_sitrep} for indicating version informations for the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existance of an update for the packages inside SIPDIBGE.
+#' @seealso \link[SIPDIBGE]{sipd_deps} for indicating dependencies of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_sitrep} for indicating version information for the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existence of an update for the packages inside SIPDIBGE.
 #' @examples
 #' \donttest{
 #' sipd_conflicts()

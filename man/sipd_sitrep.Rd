@@ -2,7 +2,7 @@
 % Please edit documentation in R/sipd_sitrep.R
 \name{sipd_sitrep}
 \alias{sipd_sitrep}
-\title{Indicate version informations of the packages inside SIPDIBGE}
+\title{Indicate version information of the packages inside SIPDIBGE}
 \usage{
 sipd_sitrep(survey = NULL)
 }
@@ -10,10 +10,10 @@ sipd_sitrep(survey = NULL)
 \item{survey}{Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.}
 }
 \value{
-A vector with version informations of the packages inside SIPDIBGE.
+A vector with version information of the packages inside SIPDIBGE.
 }
 \description{
-This function describes version informations of the packages inside SIPDIBGE.
+This function describes version information of the packages inside SIPDIBGE.
 }
 \note{
 For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -31,5 +31,5 @@ sipd_sitrep(survey="PNS")
 sipd_sitrep(survey="COVID")}
 }
 \seealso{
-\link[SIPDIBGE]{sipd_conflicts} for indicating conflicts of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_deps} for indicating dependencies of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existance of an update for the packages inside SIPDIBGE.
+\link[SIPDIBGE]{sipd_conflicts} for indicating conflicts of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_deps} for indicating dependencies of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existence of an update for the packages inside SIPDIBGE.
 }

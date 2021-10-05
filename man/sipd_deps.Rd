@@ -2,7 +2,7 @@
 % Please edit documentation in R/sipd_deps.R
 \name{sipd_deps}
 \alias{sipd_deps}
-\title{Indicate dependecies of the packages inside SIPDIBGE}
+\title{Indicate dependencies of the packages inside SIPDIBGE}
 \usage{
 sipd_deps(survey = NULL)
 }
@@ -31,5 +31,5 @@ sipd_deps(survey="PNS")
 sipd_deps(survey="COVID")}
 }
 \seealso{
-\link[SIPDIBGE]{sipd_conflicts} for indicating conflicts of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_sitrep} for indicating version informations for the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existance of an update for the packages inside SIPDIBGE.
+\link[SIPDIBGE]{sipd_conflicts} for indicating conflicts of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_logo} for showing logos of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_sitrep} for indicating version information for the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existence of an update for the packages inside SIPDIBGE.
 }
