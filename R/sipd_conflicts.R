@@ -1,6 +1,6 @@
 #' Indicate conflicts of the packages inside SIPDIBGE
 #' @description This function describes conflicts between functions of the packages inside SIPDIBGE and another installed packages.
-#' @import PNADcIBGE POFIBGE PNSIBGE COVIDIBGE cli purrr rstudioapi png grDevices graphics utils tibble
+#' @import COVIDIBGE PNADcIBGE PNSIBGE POFIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with conflicts of functions of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -8,14 +8,14 @@
 #' @examples
 #' \donttest{
 #' sipd_conflicts()
+#' # Presenting information about the COVIDIBGE package
+#' sipd_conflicts(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_conflicts(survey="PNADC")
-#' # Presenting information about the POFIBGE package
-#' sipd_conflicts(survey="POF")
 #' # Presenting information about the PNSIBGE package
 #' sipd_conflicts(survey="PNS")
-#' # Presenting information about the COVIDIBGE package
-#' sipd_conflicts(survey="COVID")}
+#' # Presenting information about the POFIBGE package
+#' sipd_conflicts(survey="POF")}
 #' @export
 
 sipd_conflicts <- function(survey = NULL) {
@@ -29,20 +29,20 @@ sipd_conflicts <- function(survey = NULL) {
     funcs <- c(funcs, ls(packs[i]))
   }
   confs <- names(table(funcs)[table(funcs) > 1])
-  if (toupper(survey) == "PNADC") {
-    sipd <- ls("package:PNADcIBGE")
+  if (toupper(survey) == "COVID") {
+    sipd <- ls("package:COVIDIBGE")
     confs <- confs[confs %in% sipd]
   }
-  else if (toupper(survey) == "POF") {
-    sipd <- ls("package:POFIBGE")
+  else if (toupper(survey) == "PNADC") {
+    sipd <- ls("package:PNADcIBGE")
     confs <- confs[confs %in% sipd]
   }
   else if (toupper(survey) == "PNS") {
     sipd <- ls("package:PNSIBGE")
     confs <- confs[confs %in% sipd]
   }
-  else if (toupper(survey) == "COVID") {
-    sipd <- ls("package:COVIDIBGE")
+  else if (toupper(survey) == "POF") {
+    sipd <- ls("package:POFIBGE")
     confs <- confs[confs %in% sipd]
   }
   else {

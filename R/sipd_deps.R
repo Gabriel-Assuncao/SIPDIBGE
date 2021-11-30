@@ -1,6 +1,6 @@
 #' Indicate dependencies of the packages inside SIPDIBGE
 #' @description This function describes packages in dependencies list of the packages inside SIPDIBGE.
-#' @import PNADcIBGE POFIBGE PNSIBGE COVIDIBGE cli purrr rstudioapi png grDevices graphics utils tibble
+#' @import COVIDIBGE PNADcIBGE PNSIBGE POFIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with packages in dependencies list of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -8,14 +8,14 @@
 #' @examples
 #' \donttest{
 #' sipd_deps()
+#' # Presenting information about the COVIDIBGE package
+#' sipd_deps(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_deps(survey="PNADC")
-#' # Presenting information about the POFIBGE package
-#' sipd_deps(survey="POF")
 #' # Presenting information about the PNSIBGE package
 #' sipd_deps(survey="PNS")
-#' # Presenting information about the COVIDIBGE package
-#' sipd_deps(survey="COVID")}
+#' # Presenting information about the POFIBGE package
+#' sipd_deps(survey="POF")}
 #' @export
 
 sipd_deps <- function(survey = NULL) {
@@ -24,17 +24,17 @@ sipd_deps <- function(survey = NULL) {
     survey <- "SIPD"
   }
   packs <- utils::available.packages(repos=getOption("repos"))
-  if (toupper(survey) == "PNADC") {
-    deps <- tools::package_dependencies("PNADcIBGE", packs)
+  if (toupper(survey) == "COVID") {
+    deps <- tools::package_dependencies("COVIDIBGE", packs)
   }
-  else if (toupper(survey) == "POF") {
-    deps <- tools::package_dependencies("POFIBGE", packs)
+  else if (toupper(survey) == "PNADC") {
+    deps <- tools::package_dependencies("PNADcIBGE", packs)
   }
   else if (toupper(survey) == "PNS") {
     deps <- tools::package_dependencies("PNSIBGE", packs)
   }
-  else if (toupper(survey) == "COVID") {
-    deps <- tools::package_dependencies("COVIDIBGE", packs)
+  else if (toupper(survey) == "POF") {
+    deps <- tools::package_dependencies("POFIBGE", packs)
   }
   else {
     sipd <- SIPDIBGE::sipd_packages()

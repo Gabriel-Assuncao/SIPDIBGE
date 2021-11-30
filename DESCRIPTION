@@ -1,22 +1,22 @@
 Package: SIPDIBGE
 Type: Package
 Title: Collection of Household Survey Packages Conducted by IBGE
-Version: 0.1.5
+Version: 0.1.6
 Authors@R: c(person("Gabriel", "Assuncao", email = "pacotesipd@ibge.gov.br",
                   role = c("aut", "cre")),
              person("Luna", "Hidalgo", email = "pacotesipd@ibge.gov.br",
                   role = c("aut")),
              person("Douglas", "Braga", email = "pacotesipd@ibge.gov.br",
                   role = c("ctb")))
-Description: Provides access to packages developed for downloading, reading and analysing microdata 
+Description: Provides access to packages developed for downloading, reading and analyzing microdata 
   from household surveys conducted by Brazilian Institute of Geography and Statistics - IBGE.
 	More information can be obtained from the official website <https://www.ibge.gov.br/>.
-Depends: R (>= 3.2.0), PNADcIBGE (>= 0.6.0), POFIBGE (>= 0.1.0),
-        PNSIBGE (>= 0.1.0), COVIDIBGE (>= 0.1.0)
-Imports: cli, purrr, rstudioapi, png, grDevices, graphics, utils,
-        tibble
-Suggests: tidyverse, survey, readr, dplyr, magrittr, projmgr, httr,
-        RCurl, timeDate, readxl, convey
+Depends: R (>= 3.2.0), COVIDIBGE (>= 0.1.0), PNADcIBGE (>= 0.6.0),
+        PNSIBGE (>= 0.1.0), POFIBGE (>= 0.1.0)
+Imports: cli, graphics, grDevices, png, purrr, rstudioapi, tibble,
+        utils
+Suggests: convey, dplyr, httr, lavaan.survey, magrittr, projmgr, RCurl,
+        readr, readxl, srvyr, surf, survey, tidyverse, timeDate
 License: GPL-3
 Encoding: UTF-8
 RoxygenNote: 7.1.2
@@ -25,6 +25,7 @@ Author: Gabriel Assuncao [aut, cre],
   Luna Hidalgo [aut],
   Douglas Braga [ctb]
 Maintainer: Gabriel Assuncao <pacotesipd@ibge.gov.br>
-Packaged: 2021-10-05 21:21:21 UTC; Gabriel Henrique
+BugReports: https://github.com/Gabriel-Assuncao/SIPDIBGE/issues
+Packaged: 2021-11-29 15:12:33 UTC; gabriel.assuncao
 Repository: CRAN
-Date/Publication: 2021-10-05 21:40:06 UTC
+Date/Publication: 2021-11-30 14:20:07 UTC

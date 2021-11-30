@@ -1,6 +1,6 @@
 #' Indicate names of the packages inside SIPDIBGE
 #' @description This function describes the packages inside SIPDIBGE.
-#' @import PNADcIBGE POFIBGE PNSIBGE COVIDIBGE cli purrr rstudioapi png grDevices graphics utils tibble
+#' @import COVIDIBGE PNADcIBGE PNSIBGE POFIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with names of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -8,14 +8,14 @@
 #' @examples
 #' \donttest{
 #' sipd_packages()
+#' # Presenting information about the COVIDIBGE package
+#' sipd_packages(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_packages(survey="PNADC")
-#' # Presenting information about the POFIBGE package
-#' sipd_packages(survey="POF")
 #' # Presenting information about the PNSIBGE package
 #' sipd_packages(survey="PNS")
-#' # Presenting information about the COVIDIBGE package
-#' sipd_packages(survey="COVID")}
+#' # Presenting information about the POFIBGE package
+#' sipd_packages(survey="POF")}
 #' @export
 
 sipd_packages <- function(survey = NULL) {
@@ -23,17 +23,17 @@ sipd_packages <- function(survey = NULL) {
   if (is.null(survey) | !is.character(survey)) {
     survey <- "SIPD"
   }
-  if (toupper(survey) == "PNADC") {
-    packs <- "PNADcIBGE"
+  if (toupper(survey) == "COVID") {
+    packs <- "COVIDIBGE"
   }
-  else if (toupper(survey) == "POF") {
-    packs <- "POFIBGE"
+  else if (toupper(survey) == "PNADC") {
+    packs <- "PNADcIBGE"
   }
   else if (toupper(survey) == "PNS") {
     packs <- "PNSIBGE"
   }
-  else if (toupper(survey) == "COVID") {
-    packs <- "COVIDIBGE"
+  else if (toupper(survey) == "POF") {
+    packs <- "POFIBGE"
   }
   else {
     packs <- utils::packageDescription("SIPDIBGE")$Depends

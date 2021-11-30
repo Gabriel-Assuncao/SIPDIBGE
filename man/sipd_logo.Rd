@@ -21,14 +21,14 @@ For more information, visit the survey official website <\url{https://www.ibge.g
 \examples{
 \donttest{
 sipd_logo()
+# Presenting information about the COVIDIBGE package
+sipd_logo(survey="COVID")
 # Presenting information about the PNADcIBGE package
 sipd_logo(survey="PNADC")
-# Presenting information about the POFIBGE package
-sipd_logo(survey="POF")
 # Presenting information about the PNSIBGE package
 sipd_logo(survey="PNS")
-# Presenting information about the COVIDIBGE package
-sipd_logo(survey="COVID")}
+# Presenting information about the POFIBGE package
+sipd_logo(survey="POF")}
 }
 \seealso{
 \link[SIPDIBGE]{sipd_conflicts} for indicating conflicts of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_deps} for indicating dependencies of the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_packages} for indicating the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_sitrep} for indicating version information for the packages inside SIPDIBGE.\cr \link[SIPDIBGE]{sipd_update} for indicating the existence of an update for the packages inside SIPDIBGE.
