@@ -1,5 +1,9 @@
 # SIPDIBGE
-## Manuais em Português dos Pacotes Disponibilizados na Última Atualização
+## Versão 0.1.7 do Pacote SIPDIBGE - Arquivamento do Pacote POFIBGE
+
+O pacote POFIBGE foi arquivado pela impossibilidade de reestruturação do servidor da pesquisa de referência não sendo possível a padronização em relação aos pacotes das demais pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE.
+
+## Versão 0.1.6 do Pacote SIPDIBGE - Manuais em Português dos Pacotes
 
 [Manual do Pacote COVIDIBGE](https://rpubs.com/gabriel-assuncao-ibge/covid)
 
@@ -7,9 +11,7 @@
 
 [Manual do Pacote PNSIBGE](https://rpubs.com/gabriel-assuncao-ibge/pns)
 
-[Manual do Pacote POFIBGE](https://rpubs.com/gabriel-assuncao-ibge/pof)
-
-## Inserido na Descrição dos Pacotes Informação para Relatório de Erros
+## Versão 0.1.5 do Pacote SIPDIBGE - Relatórios de Referência dos Pacotes
 
 [GitHub de Referência](https://github.com/Gabriel-Assuncao)
 

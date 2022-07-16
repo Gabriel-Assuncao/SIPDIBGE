@@ -1,6 +1,6 @@
 #' Indicate version information of the packages inside SIPDIBGE
 #' @description This function describes version information of the packages inside SIPDIBGE.
-#' @import COVIDIBGE PNADcIBGE PNSIBGE POFIBGE cli graphics grDevices png purrr rstudioapi tibble utils
+#' @import COVIDIBGE PNADcIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with version information of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -13,9 +13,7 @@
 #' # Presenting information about the PNADcIBGE package
 #' sipd_sitrep(survey="PNADC")
 #' # Presenting information about the PNSIBGE package
-#' sipd_sitrep(survey="PNS")
-#' # Presenting information about the POFIBGE package
-#' sipd_sitrep(survey="POF")}
+#' sipd_sitrep(survey="PNS")}
 #' @export
 
 sipd_sitrep <- function(survey = NULL) {
@@ -61,17 +59,17 @@ sipd_sitrep <- function(survey = NULL) {
     former <- purrr::map2_lgl(cran, local, `>`)
     infos <- tibble::tibble(package=deps, cran=cran %>% purrr::map_chr(as.character), local=local %>% purrr::map_chr(as.character), former=former)
   }
-  else if (toupper(survey) == "POF") {
-    deps <- unique(sort(c("POFIBGE", unlist(SIPDIBGE::sipd_deps(survey="POF")))))
-    base <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid", "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk", "utils")
-    deps <- setdiff(deps, base)
-    tool <- c("cli", "crayon", "rstudioapi")
-    deps <- setdiff(deps, tool)
-    cran <- lapply(packs[deps, "Version"], package_version)
-    local <- lapply(deps, utils::packageVersion)
-    former <- purrr::map2_lgl(cran, local, `>`)
-    infos <- tibble::tibble(package=deps, cran=cran %>% purrr::map_chr(as.character), local=local %>% purrr::map_chr(as.character), former=former)
-  }
+  # else if (toupper(survey) == "POF") {
+  #   deps <- unique(sort(c("POFIBGE", unlist(SIPDIBGE::sipd_deps(survey="POF")))))
+  #   base <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid", "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk", "utils")
+  #   deps <- setdiff(deps, base)
+  #   tool <- c("cli", "crayon", "rstudioapi")
+  #   deps <- setdiff(deps, tool)
+  #   cran <- lapply(packs[deps, "Version"], package_version)
+  #   local <- lapply(deps, utils::packageVersion)
+  #   former <- purrr::map2_lgl(cran, local, `>`)
+  #   infos <- tibble::tibble(package=deps, cran=cran %>% purrr::map_chr(as.character), local=local %>% purrr::map_chr(as.character), former=former)
+  # }
   else {
     deps <- unique(sort(c(sipd_packages(), unlist(SIPDIBGE::sipd_deps()))))
     base <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid", "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk", "utils")

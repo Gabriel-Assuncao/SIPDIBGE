@@ -1,7 +1,7 @@
 Package: SIPDIBGE
 Type: Package
 Title: Collection of Household Survey Packages Conducted by IBGE
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: c(person("Gabriel", "Assuncao", email = "pacotesipd@ibge.gov.br",
                   role = c("aut", "cre")),
              person("Luna", "Hidalgo", email = "pacotesipd@ibge.gov.br",
@@ -12,20 +12,20 @@ Description: Provides access to packages developed for downloading, reading and 
   from household surveys conducted by Brazilian Institute of Geography and Statistics - IBGE.
 	More information can be obtained from the official website <https://www.ibge.gov.br/>.
 Depends: R (>= 3.2.0), COVIDIBGE (>= 0.1.0), PNADcIBGE (>= 0.6.0),
-        PNSIBGE (>= 0.1.0), POFIBGE (>= 0.1.0)
+        PNSIBGE (>= 0.1.0)
 Imports: cli, graphics, grDevices, png, purrr, rstudioapi, tibble,
         utils
 Suggests: convey, dplyr, httr, lavaan.survey, magrittr, projmgr, RCurl,
         readr, readxl, srvyr, surf, survey, tidyverse, timeDate
 License: GPL-3
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
 NeedsCompilation: no
 Author: Gabriel Assuncao [aut, cre],
   Luna Hidalgo [aut],
   Douglas Braga [ctb]
 Maintainer: Gabriel Assuncao <pacotesipd@ibge.gov.br>
 BugReports: https://github.com/Gabriel-Assuncao/SIPDIBGE/issues
-Packaged: 2021-11-29 15:12:33 UTC; gabriel.assuncao
+Packaged: 2022-07-16 12:06:46 UTC; Meu Computador
 Repository: CRAN
-Date/Publication: 2021-11-30 14:20:07 UTC
+Date/Publication: 2022-07-16 12:30:02 UTC

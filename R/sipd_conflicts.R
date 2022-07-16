@@ -1,6 +1,6 @@
 #' Indicate conflicts of the packages inside SIPDIBGE
 #' @description This function describes conflicts between functions of the packages inside SIPDIBGE and another installed packages.
-#' @import COVIDIBGE PNADcIBGE PNSIBGE POFIBGE cli graphics grDevices png purrr rstudioapi tibble utils
+#' @import COVIDIBGE PNADcIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with conflicts of functions of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -13,9 +13,7 @@
 #' # Presenting information about the PNADcIBGE package
 #' sipd_conflicts(survey="PNADC")
 #' # Presenting information about the PNSIBGE package
-#' sipd_conflicts(survey="PNS")
-#' # Presenting information about the POFIBGE package
-#' sipd_conflicts(survey="POF")}
+#' sipd_conflicts(survey="PNS")}
 #' @export
 
 sipd_conflicts <- function(survey = NULL) {
@@ -41,10 +39,10 @@ sipd_conflicts <- function(survey = NULL) {
     sipd <- ls("package:PNSIBGE")
     confs <- confs[confs %in% sipd]
   }
-  else if (toupper(survey) == "POF") {
-    sipd <- ls("package:POFIBGE")
-    confs <- confs[confs %in% sipd]
-  }
+  # else if (toupper(survey) == "POF") {
+  #   sipd <- ls("package:POFIBGE")
+  #   confs <- confs[confs %in% sipd]
+  # }
   else {
     sipd <- paste0("package:", SIPDIBGE::sipd_packages())
     funcs <- NULL
