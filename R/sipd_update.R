@@ -29,14 +29,22 @@ sipd_update <- function(survey = NULL) {
     infos <- SIPDIBGE::sipd_sitrep(survey="PNADC")
     updts <- infos[infos$former==TRUE,]
   }
+  else if (toupper(survey) == "PNDS") {
+    message("The PNDSIBGE package is under development and will be available soon.")
+    return(NULL)
+    infos <- sipd_sitrep(survey="PNDS")
+    updts <- infos[infos$former==TRUE,]
+  }
   else if (toupper(survey) == "PNS") {
     infos <- sipd_sitrep(survey="PNS")
     updts <- infos[infos$former==TRUE,]
   }
-  # else if (toupper(survey) == "POF") {
-  #   infos <- sipd_sitrep(survey="POF")
-  #   updts <- infos[infos$former==TRUE,]
-  # }
+  else if (toupper(survey) == "POF") {
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    return(NULL)
+    infos <- sipd_sitrep(survey="POF")
+    updts <- infos[infos$former==TRUE,]
+  }
   else {
     infos <- sipd_sitrep()
     updts <- infos[infos$former==TRUE,]

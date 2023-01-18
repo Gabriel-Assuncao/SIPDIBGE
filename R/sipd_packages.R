@@ -27,12 +27,19 @@ sipd_packages <- function(survey = NULL) {
   else if (toupper(survey) == "PNADC") {
     packs <- "PNADcIBGE"
   }
+  else if (toupper(survey) == "PNDS") {
+    message("The PNDSIBGE package is under development and will be available soon.")
+    return(NULL)
+    packs <- "PNDSIBGE"
+  }
   else if (toupper(survey) == "PNS") {
     packs <- "PNSIBGE"
   }
-  # else if (toupper(survey) == "POF") {
-  #   packs <- "POFIBGE"
-  # }
+  else if (toupper(survey) == "POF") {
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    return(NULL)
+    packs <- "POFIBGE"
+  }
   else {
     packs <- utils::packageDescription("SIPDIBGE")$Depends
     packs <- strsplit(packs, ",")[[1]]

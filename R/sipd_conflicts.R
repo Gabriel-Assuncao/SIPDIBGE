@@ -35,14 +35,22 @@ sipd_conflicts <- function(survey = NULL) {
     sipd <- ls("package:PNADcIBGE")
     confs <- confs[confs %in% sipd]
   }
+  else if (toupper(survey) == "PNDS") {
+    message("The PNDSIBGE package is under development and will be available soon.")
+    return(NULL)
+    sipd <- ls("package:PNDSIBGE")
+    confs <- confs[confs %in% sipd]
+  }
   else if (toupper(survey) == "PNS") {
     sipd <- ls("package:PNSIBGE")
     confs <- confs[confs %in% sipd]
   }
-  # else if (toupper(survey) == "POF") {
-  #   sipd <- ls("package:POFIBGE")
-  #   confs <- confs[confs %in% sipd]
-  # }
+  else if (toupper(survey) == "POF") {
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    return(NULL)
+    sipd <- ls("package:POFIBGE")
+    confs <- confs[confs %in% sipd]
+  }
   else {
     sipd <- paste0("package:", SIPDIBGE::sipd_packages())
     funcs <- NULL

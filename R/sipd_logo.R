@@ -33,18 +33,28 @@ sipd_logo <- function(survey = NULL) {
     graphics::plot.new()
     graphics::rasterImage(logo,0,0,1,1)
   }
+  else if (toupper(survey) == "PNDS") {
+    message("The PNDSIBGE package is under development and will be available soon.")
+    return(NULL)
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnds_logo.png"))
+    grDevices::dev.new()
+    graphics::plot.new()
+    graphics::rasterImage(logo,0,0,1,1)
+  }
   else if (toupper(survey) == "PNS") {
     logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pns_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
     graphics::rasterImage(logo,0,0,1,1)
   }
-  # else if (toupper(survey) == "POF") {
-  #   logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pof_logo.png"))
-  #   grDevices::dev.new()
-  #   graphics::plot.new()
-  #   graphics::rasterImage(logo,0,0,1,1)
-  # }
+  else if (toupper(survey) == "POF") {
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    return(NULL)
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pof_logo.png"))
+    grDevices::dev.new()
+    graphics::plot.new()
+    graphics::rasterImage(logo,0,0,1,1)
+  }
   else {
     sipd <- dir(system.file("extdata", package="SIPDIBGE"))
     for (i in 1:length(sipd)) {

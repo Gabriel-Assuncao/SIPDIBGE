@@ -28,12 +28,19 @@ sipd_deps <- function(survey = NULL) {
   else if (toupper(survey) == "PNADC") {
     deps <- tools::package_dependencies("PNADcIBGE", packs)
   }
+  else if (toupper(survey) == "PNDS") {
+    message("The PNDSIBGE package is under development and will be available soon.")
+    return(NULL)
+    deps <- tools::package_dependencies("PNDSIBGE", packs)
+  }
   else if (toupper(survey) == "PNS") {
     deps <- tools::package_dependencies("PNSIBGE", packs)
   }
-  # else if (toupper(survey) == "POF") {
-  #   deps <- tools::package_dependencies("POFIBGE", packs)
-  # }
+  else if (toupper(survey) == "POF") {
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    return(NULL)
+    deps <- tools::package_dependencies("POFIBGE", packs)
+  }
   else {
     sipd <- SIPDIBGE::sipd_packages()
     deps <- tools::package_dependencies(sipd, packs)
