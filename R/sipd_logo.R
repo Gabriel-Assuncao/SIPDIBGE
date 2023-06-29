@@ -18,49 +18,53 @@
 
 sipd_logo <- function(survey = NULL) {
   options(repos=structure(c(CRAN="https://cran.r-project.org/")))
+  grDevices::dev.new()
+  graphics::plot.new()
   if (is.null(survey) | !is.character(survey)) {
     survey <- "SIPD"
   }
   if (toupper(survey) == "COVID") {
-    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/covid_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/covid_logo.png"))
     graphics::rasterImage(logo,0,0,1,1)
   }
   else if (toupper(survey) == "PNADC") {
-    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnadc_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnadc_logo.png"))
     graphics::rasterImage(logo,0,0,1,1)
   }
   else if (toupper(survey) == "PNDS") {
     message("The PNDSIBGE package is under development and will be available soon.")
     return(NULL)
-    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnds_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pnds_logo.png"))
     graphics::rasterImage(logo,0,0,1,1)
   }
   else if (toupper(survey) == "PNS") {
-    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pns_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pns_logo.png"))
     graphics::rasterImage(logo,0,0,1,1)
   }
   else if (toupper(survey) == "POF") {
     message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
     return(NULL)
-    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pof_logo.png"))
     grDevices::dev.new()
     graphics::plot.new()
+    logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/pof_logo.png"))
     graphics::rasterImage(logo,0,0,1,1)
   }
   else {
     sipd <- dir(system.file("extdata", package="SIPDIBGE"))
+    sipd <- sipd[!(grepl(pattern="POF", x=toupper(sipd), fixed=TRUE))]
+    sipd <- sipd[!(grepl(pattern="PNDS", x=toupper(sipd), fixed=TRUE))]
     for (i in 1:length(sipd)) {
-      logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/", sipd[i]))
       grDevices::dev.new()
       graphics::plot.new()
+      logo <- png::readPNG(paste0(system.file("extdata", package="SIPDIBGE"), "/", sipd[i]))
       graphics::rasterImage(logo,0,0,1,1)
     }
   }
