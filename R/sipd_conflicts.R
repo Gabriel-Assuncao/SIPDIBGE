@@ -12,8 +12,12 @@
 #' sipd_conflicts(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_conflicts(survey="PNADC")
+#' # Presenting information about the PNDSIBGE package
+#' sipd_conflicts(survey="PNDS")
 #' # Presenting information about the PNSIBGE package
-#' sipd_conflicts(survey="PNS")}
+#' sipd_conflicts(survey="PNS")
+#' # Presenting information about the POFIBGE package
+#' sipd_conflicts(survey="POF")}
 #' @export
 
 sipd_conflicts <- function(survey = NULL) {

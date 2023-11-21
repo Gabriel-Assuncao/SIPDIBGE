@@ -12,8 +12,12 @@
 #' sipd_update(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_update(survey="PNADC")
+#' # Presenting information about the PNDSIBGE package
+#' sipd_update(survey="PNDS")
 #' # Presenting information about the PNSIBGE package
-#' sipd_update(survey="PNS")}
+#' sipd_update(survey="PNS")
+#' # Presenting information about the POFIBGE package
+#' sipd_update(survey="POF")}
 #' @export
 
 sipd_update <- function(survey = NULL) {
@@ -22,7 +26,7 @@ sipd_update <- function(survey = NULL) {
     survey <- "SIPD"
   }
   if (toupper(survey) == "COVID") {
-    infos <- sipd_sitrep(survey="COVID")
+    infos <- SIPDIBGE::sipd_sitrep(survey="COVID")
     updts <- infos[infos$former==TRUE,]
   }
   else if (toupper(survey) == "PNADC") {
@@ -32,21 +36,21 @@ sipd_update <- function(survey = NULL) {
   else if (toupper(survey) == "PNDS") {
     message("The PNDSIBGE package is under development and will be available soon.")
     return(NULL)
-    infos <- sipd_sitrep(survey="PNDS")
+    infos <- SIPDIBGE::sipd_sitrep(survey="PNDS")
     updts <- infos[infos$former==TRUE,]
   }
   else if (toupper(survey) == "PNS") {
-    infos <- sipd_sitrep(survey="PNS")
+    infos <- SIPDIBGE::sipd_sitrep(survey="PNS")
     updts <- infos[infos$former==TRUE,]
   }
   else if (toupper(survey) == "POF") {
     message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
     return(NULL)
-    infos <- sipd_sitrep(survey="POF")
+    infos <- SIPDIBGE::sipd_sitrep(survey="POF")
     updts <- infos[infos$former==TRUE,]
   }
   else {
-    infos <- sipd_sitrep()
+    infos <- SIPDIBGE::sipd_sitrep()
     updts <- infos[infos$former==TRUE,]
   }
   return(updts)

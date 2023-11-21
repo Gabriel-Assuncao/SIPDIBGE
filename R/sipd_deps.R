@@ -12,8 +12,12 @@
 #' sipd_deps(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_deps(survey="PNADC")
+#' # Presenting information about the PNDSIBGE package
+#' sipd_deps(survey="PNDS")
 #' # Presenting information about the PNSIBGE package
-#' sipd_deps(survey="PNS")}
+#' sipd_deps(survey="PNS")
+#' # Presenting information about the POFIBGE package
+#' sipd_deps(survey="POF")}
 #' @export
 
 sipd_deps <- function(survey = NULL) {

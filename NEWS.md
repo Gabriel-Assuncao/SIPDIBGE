@@ -1,5 +1,13 @@
 # SIPDIBGE
-## Versão 0.1.8 do Pacote SIPDIBGE - Padronização das Funções dos Pacotes
+## Versão 0.2.0 do Pacote SIPDIBGE - Inserção de Argumento para Download de Arquivos
+
+Foi inserido nas funções dos pacotes desenvolvidos para a leitura dos microdados das pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE um argumento de indicação para não realizar novamente o download, caso os arquivos relacionados já existam no diretório de referência. Além disso, também foi realizada a pré-submissão do pacote PNDSIBGE que ainda está em desenvolvimento.
+
+[Pacote em Desenvolvimento da Pesquisa PNDS](https://cran.r-project.org/package=PNDSIBGE)
+
+[Manual do Pacote em Desenvolvimento PNDSIBGE](https://rpubs.com/gabriel-assuncao-ibge/pnds)
+
+## Versões 0.1.8 e 0.1.9 do Pacote SIPDIBGE - Padronização das Funções dos Pacotes
 
 Foram realizados ajustes nas funções dos pacotes desenvolvidos para a leitura dos microdados das pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE com o intuito de padronizar os procedimentos realizados, sendo recomendável a atualização dos pacotes para a versão mais recente.
 
@@ -8,6 +16,8 @@ Foram realizados ajustes nas funções dos pacotes desenvolvidos para a leitura 
 O pacote POFIBGE foi arquivado pela impossibilidade de reestruturação do servidor da pesquisa de referência não sendo possível a padronização em relação aos pacotes das demais pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE.
 
 [Pacote Arquivado da Pesquisa POF](https://cran.r-project.org/package=POFIBGE)
+
+[Manual do Pacote Arquivado POFIBGE](https://rpubs.com/gabriel-assuncao-ibge/pof)
 
 ## Versão 0.1.6 do Pacote SIPDIBGE - Manuais em Português dos Pacotes
 

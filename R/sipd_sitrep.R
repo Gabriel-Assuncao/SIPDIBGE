@@ -12,8 +12,12 @@
 #' sipd_sitrep(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_sitrep(survey="PNADC")
+#' # Presenting information about the PNDSIBGE package
+#' sipd_sitrep(survey="PNDS")
 #' # Presenting information about the PNSIBGE package
-#' sipd_sitrep(survey="PNS")}
+#' sipd_sitrep(survey="PNS")
+#' # Presenting information about the POFIBGE package
+#' sipd_sitrep(survey="POF")}
 #' @export
 
 sipd_sitrep <- function(survey = NULL) {
@@ -86,7 +90,7 @@ sipd_sitrep <- function(survey = NULL) {
     infos <- tibble::tibble(package=deps, cran=cran %>% purrr::map_chr(as.character), local=local %>% purrr::map_chr(as.character), former=former)
   }
   else {
-    deps <- unique(sort(c(sipd_packages(), unlist(SIPDIBGE::sipd_deps()))))
+    deps <- unique(sort(c(SIPDIBGE::sipd_packages(), unlist(SIPDIBGE::sipd_deps()))))
     base <- c("base", "compiler", "datasets", "graphics", "grDevices", "grid", "methods", "parallel", "splines", "stats", "stats4", "tools", "tcltk", "utils")
     deps <- setdiff(deps, base)
     tool <- c("cli", "crayon", "rstudioapi")

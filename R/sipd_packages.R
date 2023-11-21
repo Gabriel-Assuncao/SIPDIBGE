@@ -12,8 +12,12 @@
 #' sipd_packages(survey="COVID")
 #' # Presenting information about the PNADcIBGE package
 #' sipd_packages(survey="PNADC")
+#' # Presenting information about the PNDSIBGE package
+#' sipd_packages(survey="PNDS")
 #' # Presenting information about the PNSIBGE package
-#' sipd_packages(survey="PNS")}
+#' sipd_packages(survey="PNS")
+#' # Presenting information about the POFIBGE package
+#' sipd_packages(survey="POF")}
 #' @export
 
 sipd_packages <- function(survey = NULL) {
@@ -46,6 +50,8 @@ sipd_packages <- function(survey = NULL) {
     packs <- gsub("^\\s+|\\s+$", "", packs)
     packs <- vapply(strsplit(packs, "\\s+"), "[[", 1, FUN.VALUE=character(1))
     packs <- packs[endsWith(packs, "IBGE")]
+    packs <- packs[!(grepl(pattern="POF", x=toupper(packs), fixed=TRUE))]
+    packs <- packs[!(grepl(pattern="PNDS", x=toupper(packs), fixed=TRUE))]
   }
   return(packs)
 }
