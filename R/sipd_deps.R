@@ -1,6 +1,6 @@
 #' Indicate dependencies of the packages inside SIPDIBGE
 #' @description This function describes packages in dependencies list of the packages inside SIPDIBGE.
-#' @import COVIDIBGE PNADcIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
+#' @import COVIDIBGE PNADcIBGE PNDSIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with packages in dependencies list of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -33,7 +33,7 @@ sipd_deps <- function(survey = NULL) {
     deps <- tools::package_dependencies("PNADcIBGE", packs)
   }
   else if (toupper(survey) == "PNDS") {
-    message("The PNDSIBGE package is under development and will be available soon.")
+    message("The PNDSIBGE package is under development and will be available soon.\n")
     return(NULL)
     deps <- tools::package_dependencies("PNDSIBGE", packs)
   }
@@ -41,7 +41,7 @@ sipd_deps <- function(survey = NULL) {
     deps <- tools::package_dependencies("PNSIBGE", packs)
   }
   else if (toupper(survey) == "POF") {
-    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.\n")
     return(NULL)
     deps <- tools::package_dependencies("POFIBGE", packs)
   }

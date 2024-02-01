@@ -1,6 +1,6 @@
 #' Indicate names of the packages inside SIPDIBGE
 #' @description This function describes the packages inside SIPDIBGE.
-#' @import COVIDIBGE PNADcIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
+#' @import COVIDIBGE PNADcIBGE PNDSIBGE PNSIBGE cli graphics grDevices png purrr rstudioapi tibble utils
 #' @param survey Name of the household survey for reference package information. If \code{NULL}, presents the information of all the packages inside this collection.
 #' @return A vector with names of the packages inside SIPDIBGE.
 #' @note For more information, visit the survey official website <\url{https://www.ibge.gov.br/}> and consult the other functions of this package, described below.
@@ -32,7 +32,7 @@ sipd_packages <- function(survey = NULL) {
     packs <- "PNADcIBGE"
   }
   else if (toupper(survey) == "PNDS") {
-    message("The PNDSIBGE package is under development and will be available soon.")
+    message("The PNDSIBGE package is under development and will be available soon.\n")
     return(NULL)
     packs <- "PNDSIBGE"
   }
@@ -40,7 +40,7 @@ sipd_packages <- function(survey = NULL) {
     packs <- "PNSIBGE"
   }
   else if (toupper(survey) == "POF") {
-    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.")
+    message("The POFIBGE package was archived due to the impossibility of restructuring the files related to the survey microdata.\n")
     return(NULL)
     packs <- "POFIBGE"
   }

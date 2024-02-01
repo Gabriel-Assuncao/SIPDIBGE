@@ -1,4 +1,8 @@
 # SIPDIBGE
+## Versão 0.2.1 do Pacote SIPDIBGE - Ajuste nas Definições de Opções dos Pacotes
+
+Foram realizados ajustes nas funções dos pacotes desenvolvidos para a leitura dos microdados das pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE para correção nas definições de opções com o intuito de retornar ao valor original definido pelo usuário ao final da execução das rotinas envolvidas e também foram inseridas as descrições dos nomes referentes aos acrônimos das pesquisas nos arquivos dos pacotes, sendo que tais indicações foram realizadas durante a pré-submissão do pacote PNDSIBGE.
+
 ## Versão 0.2.0 do Pacote SIPDIBGE - Inserção de Argumento para Download de Arquivos
 
 Foi inserido nas funções dos pacotes desenvolvidos para a leitura dos microdados das pesquisas do Sistema Integrado de Pesquisas Domiciliares (SIPD) do IBGE um argumento de indicação para não realizar novamente o download, caso os arquivos relacionados já existam no diretório de referência. Além disso, também foi realizada a pré-submissão do pacote PNDSIBGE que ainda está em desenvolvimento.
